@@ -30,7 +30,7 @@ class UnidadForm
                             ->label('Número económico')
                             ->placeholder('ECO 126')
                             ->required()
-                            ->maxLength(20)
+                            ->maxLength(50)
                             ->unique(ignoreRecord: true)
                             ->dehydrateStateUsing(fn (?string $state) => preg_replace('/\s+/', ' ', mb_strtoupper(trim((string) $state)))),
                         Select::make('clase')
